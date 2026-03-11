@@ -20,6 +20,7 @@ app = FastAPI(
 origins = [
     "http://localhost:5173", # Vite default
     "http://localhost:3000",
+    "https://sales-insight-automater.vercel.app",
 ]
 
 app.add_middleware(

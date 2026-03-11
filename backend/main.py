@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 from api.router import router as api_router
 from core.security import verify_api_key
 
-load_dotenv()
+# Load from the parent directory where .env is located
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 app = FastAPI(
     title="Sales Insight Automator API",

@@ -1,6 +1,10 @@
 import os
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
+
+# Ensure we have the environment loaded in this context if testing locally
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 def generate_sales_summary(data_context: str) -> str:
     """
